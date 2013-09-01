@@ -1,0 +1,2 @@
+module InisHelper
+end

@@ -1,0 +1,61 @@
+
+codegen=$HOME/Rails_Projects/codegen_rails CD=. filter="*" {
+ Gemfile
+ Gemfile.lock
+ README.rdoc
+ Rakefile
+ config.ru
+  app_controllers=./app/controllers/ writing=. CD=. filter="*" {
+  application_controller.rb
+  inis_controller.rb
+  }
+  app_models=./app/models CD=. writhing=. filter="*" {
+  }
+  app_views=./app/views CD=. writhing=. filter="**/*" {
+  inis/codegen.html.erb
+  inis/index.html.erb
+  inis/show.html.erb
+  layouts/application.html.erb
+  }
+  app_helper=./app/helpers/ CD=. writing=. filter="**/*" {
+  application_helper.rb
+  inis_helper.rb
+  }
+  app_asset=./app/assets/ CD=. writhing=. filter="**/*" {
+  images/rails.png
+  javascripts/application.js
+  javascripts/inis.js.coffee
+  stylesheets/application.css
+  stylesheets/inis.css.scss
+  stylesheets/scaffolds.css.scss
+  }
+  app_db=./db/ CD=. writhing=. filter="**/*.rb" {
+  seeds.rb
+  }
+  app_test=./test/ CD=. writhing=. filter="**/*" { 
+  functional/inis_controller_test.rb
+  performance/browsing_test.rb
+  test_helper.rb
+  unit/helpers/inis_helper_test.rb
+  }
+  script=./script/ CD=. writing=. filter=**/*" {
+  rails
+  }
+  config=./config CD=. writing=. filter="**/*" {
+  application.rb
+  boot.rb
+  database.yml
+  environment.rb
+  environments/development.rb
+  environments/production.rb
+  environments/test.rb
+  initializers/backtrace_silencers.rb
+  initializers/inflections.rb
+  initializers/mime_types.rb
+  initializers/secret_token.rb
+  initializers/session_store.rb
+  initializers/wrap_parameters.rb
+  locales/en.yml
+  routes.rb
+  }
+}

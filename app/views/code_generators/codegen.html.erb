@@ -1,0 +1,7 @@
+<h1>Inis#index</h1>
+<%= form_tag('/inis/show/', method: :get) do %>
+  <%= hidden_field_tag 'page[type]', 'yaml' %>
+  <%= text_area(:page, :text) %>
+  <%= submit_tag(:submit) %>
+<% end %>
+
