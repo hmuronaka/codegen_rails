@@ -7,25 +7,60 @@ codegen=$HOME/Rails_Projects/codegen_rails CD=. filter="*" {
  config.ru
   app_controllers=./app/controllers/ writing=. CD=. filter="*" {
   application_controller.rb
+  code_generators_controller.rb
   inis_controller.rb
   }
   app_models=./app/models CD=. writhing=. filter="*" {
   }
   app_views=./app/views CD=. writhing=. filter="**/*" {
-  inis/codegen.html.erb
+  code_generators/codegen.html.erb
+  code_generators/generate.html.erb
   inis/index.html.erb
   inis/show.html.erb
   layouts/application.html.erb
   }
   app_helper=./app/helpers/ CD=. writing=. filter="**/*" {
   application_helper.rb
+  code_generators_helper.rb
   inis_helper.rb
+  }
+  lib=./lib/codegen/ CD=. writhing=. filter="**/*" {
+  CppGenerator.rb
+  CppHelper.rb
+  CppIntValueGenerator.rb
+  CppStringValueGenerator.rb
+  HeaderGenerator.rb
+  HeaderListValueGenerator.rb
+  HeaderValueGenerator.rb
+  Indent.rb
+  Ini.cpp.erb
+  Ini.erb
+  Ini.h.erb
+  IniCommentGenerator.rb
+  IniGenerator.rb
+  IniHelper.cpp
+  IniHelper.h.rb
+  IniIntValueGenerator.rb
+  IniListValueGenerator.rb
+  IniStringValueGenerator.rb
+  IniValueGenerator.rb
+  _Class.cpp.erb
+  _Class.h.erb
+  _Section.cpp.erb
+  _Section.h.erb
+  _Section.ini.erb
+  def.ini.yml
+  type_map.rb
+  IIni.h
+  IniHelper.h
   }
   app_asset=./app/assets/ CD=. writhing=. filter="**/*" {
   images/rails.png
   javascripts/application.js
+  javascripts/code_generators.js.coffee
   javascripts/inis.js.coffee
   stylesheets/application.css
+  stylesheets/code_generators.css.scss
   stylesheets/inis.css.scss
   stylesheets/scaffolds.css.scss
   }
@@ -33,9 +68,11 @@ codegen=$HOME/Rails_Projects/codegen_rails CD=. filter="*" {
   seeds.rb
   }
   app_test=./test/ CD=. writhing=. filter="**/*" { 
+  functional/code_generators_controller_test.rb
   functional/inis_controller_test.rb
   performance/browsing_test.rb
   test_helper.rb
+  unit/helpers/code_generators_helper_test.rb
   unit/helpers/inis_helper_test.rb
   }
   script=./script/ CD=. writing=. filter=**/*" {

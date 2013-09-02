@@ -1,10 +1,10 @@
 <h1>codegen yaml<->ini</h1>
 <%= form_tag('/code_generators/generate/', method: :get)  do %>
   <%= hidden_field_tag("res[type]", @res[:type]) %>
-  <%= text_area_tag("res[from_code]", @res[:from_code], size: "40x20") %>
+  <%= text_area_tag("res[from_code]", @res[:from_code], size: "80x20", class: "monospace") %>
   <%= submit_tag("generate") %>
 <% end %>
 
 <% if @res[:to_code] %>
-  <%= text_area_tag("res[to_code", @res[:to_code], size:"40x20") %>
+  <%= text_area_tag("res[to_code]", @res[:to_code], size:"80x20") %>
 <% end %>
