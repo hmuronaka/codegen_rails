@@ -4,7 +4,7 @@ require 'type_map.rb'
 require 'CppHelper.rb'
 require 'CppIntValueGenerator.rb'
 require 'CppStringValueGenerator.rb'
-require 'Pathname'
+require 'pathname'
 
 module CodegenLib
 

@@ -5,7 +5,7 @@ require 'CppHelper.rb'
 require 'HeaderListValueGenerator.rb'
 require 'HeaderValueGenerator.rb'
 require 'erb'
-require 'Pathname'
+require 'pathname'
 
 module CodegenLib
 
