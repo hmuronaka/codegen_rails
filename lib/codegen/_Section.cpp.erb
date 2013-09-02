@@ -1,0 +1,21 @@
+<%= section['section'] %>::<%= section['section'] %>()
+<%= section_initializer_to_s section %>
+{
+}
+
+<%= section['section'] %>::~<%= section['section'] %>()
+{
+}
+
+void <%= section['section'] %>::load(const <%= string_type %>& iniPath, const <%= string_type %>& section) {
+  <%- section['values'].each do |value| -%>
+  <%= value_load_to_s value %>
+  <%- end -%>
+}
+  
+void <%= section['section'] %>::save(const <%= string_type %>& iniPath, const <%= string_type %>& section) {
+  <%- section['values'].each do |value| -%>
+  <%= value_save_to_s value %>
+  <%- end -%>
+}
+
