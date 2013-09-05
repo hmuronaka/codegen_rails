@@ -1,6 +1,6 @@
 #coding: utf-8
 
-module CodegenLib
+module Codegenlib
   module CppHelper
 
     def textize(txt)

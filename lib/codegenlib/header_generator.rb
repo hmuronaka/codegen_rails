@@ -1,13 +1,12 @@
 # coding: utf-8
-require 'type_map.rb'
-require 'Indent.rb'
-require 'CppHelper.rb'
-require 'HeaderListValueGenerator.rb'
-require 'HeaderValueGenerator.rb'
-require 'erb'
-require 'pathname'
+#require 'cpp_helper'
+#require 'header_list_value_generator'
+#require 'HeaderValueGenerator'
+#require 'erb'
+#require 'pathname'
+#require 'type_map.rb'
 
-module CodegenLib
+module Codegenlib
 
   class HeaderGenerator
   

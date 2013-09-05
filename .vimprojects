@@ -8,6 +8,7 @@ codegen=$HOME/Rails_Projects/codegen_rails CD=. filter="*" {
   app_controllers=./app/controllers/ writing=. CD=. filter="*" {
   application_controller.rb
   code_generators_controller.rb
+  def.ini.yml
   inis_controller.rb
   }
   app_models=./app/models CD=. writhing=. filter="*" {
@@ -24,32 +25,32 @@ codegen=$HOME/Rails_Projects/codegen_rails CD=. filter="*" {
   code_generators_helper.rb
   inis_helper.rb
   }
-  lib=./lib/codegen/ CD=. writhing=. filter="**/*" {
-  CppGenerator.rb
-  CppHelper.rb
-  CppIntValueGenerator.rb
-  CppStringValueGenerator.rb
-  HeaderGenerator.rb
-  HeaderListValueGenerator.rb
-  HeaderValueGenerator.rb
+  lib=./lib/codegenlib/ CD=. writhing=. filter="**/*" {
   Indent.rb
   Ini.cpp.erb
   Ini.erb
   Ini.h.erb
-  IniCommentGenerator.rb
-  IniGenerator.rb
   IniHelper.cpp
   IniHelper.h.rb
-  IniIntValueGenerator.rb
-  IniListValueGenerator.rb
-  IniStringValueGenerator.rb
-  IniValueGenerator.rb
   _Class.cpp.erb
   _Class.h.erb
   _Section.cpp.erb
   _Section.h.erb
   _Section.ini.erb
+  cpp_generator.rb
+  cpp_helper.rb
+  cpp_int_value_generator.rb
+  cpp_string_value_generator.rb
   def.ini.yml
+  header_generator.rb
+  header_list_value_generator.rb
+  header_value_generator.rb
+  ini_comment_generator.rb
+  ini_generator.rb
+  ini_int_value_generator.rb
+  ini_list_value_generator.rb
+  ini_string_value_generator.rb
+  ini_value_generator.rb
   type_map.rb
   IIni.h
   IniHelper.h

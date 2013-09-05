@@ -1,8 +1,8 @@
-require 'HeaderValueGenerator.rb'
-require 'CppHelper.rb'
-require 'type_map.rb'
+#require 'HeaderValueGenerator.rb'
+#require 'CppHelper.rb'
+#require 'type_map.rb'
 
-module CodegenLib
+module Codegenlib
 
   class HeaderListValueGenerator 
   

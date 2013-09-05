@@ -1,5 +1,6 @@
-require 'CppGenerator.rb'
-require 'HeaderGenerator.rb'
+#require 'CppGenerator.rb'
+#require 'HeaderGenerator.rb'
+#require 'IniGenerator.rb'
 
 class CodeGeneratorsController < ApplicationController
   def generate
@@ -15,10 +16,20 @@ class CodeGeneratorsController < ApplicationController
       @res[:type] = params[:res][:type]
       @res[:from_code] = params[:res][:from_code]
       #gen = CodegenLib::CppGenerator.new
-      gen = CodegenLib::HeaderGenerator.new
-      logger.info params[:res][:from_code]
+      gen = Codegenlib::HeaderGenerator.new
       yaml = YAML.load(params[:res][:from_code].gsub(/\r\n/, "\n" ))
-      @res[:to_code] = gen.generate("test", yaml)
+      @res[:to_code_1] = gen.generate("test", yaml)
+
+      gen = Codegenlib::CppGenerator.new
+      yaml = YAML.load(params[:res][:from_code].gsub(/\r\n/, "\n" ))
+      @res[:to_code_2] = gen.generate("test", yaml)
+
+      gen = Codegenlib::IniGenerator.new
+      yaml = YAML.load(params[:res][:from_code].gsub(/\r\n/, "\n" ))
+      @res[:to_code_3] = gen.generate(yaml)
+
+
+
     end
 
     respond_to do |format|

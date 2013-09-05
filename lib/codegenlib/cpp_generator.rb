@@ -1,12 +1,12 @@
 # coding: utf-8
-require 'erb'
-require 'type_map.rb'
-require 'CppHelper.rb'
-require 'CppIntValueGenerator.rb'
-require 'CppStringValueGenerator.rb'
-require 'pathname'
+# require 'erb'
+# require 'type_map.rb'
+# require 'CppHelper.rb'
+# require 'CppIntValueGenerator.rb'
+# require 'CppStringValueGenerator.rb'
+# require 'pathname'
 
-module CodegenLib
+module Codegenlib
 
   class CppGenerator
   

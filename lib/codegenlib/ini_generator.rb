@@ -1,24 +1,25 @@
 # coding: utf-8
-require 'erb'
-require 'IniListValueGenerator.rb'
-require 'IniStringValueGenerator.rb'
-require 'IniCommentGenerator.rb'
-require 'IniIntValueGenerator.rb'
+# require 'erb'
+# require 'IniListValueGenerator.rb'
+# require 'IniStringValueGenerator.rb'
+# require 'IniCommentGenerator.rb'
+# require 'IniIntValueGenerator.rb'
+# require 'pathname'
 
-module CodegenLib
+module Codegenlib
 
   class IniGenerator
 
     include IniCommentGenerator
   
     def initialize
-  
+      @self_path = File.dirname( File.expand_path(__FILE__) )
     end
   
     def generate(yaml)
       @env = yaml['env']
 
-      filename = "Ini.erb"
+      filename = (Pathname.new(@self_path) + "Ini.erb").to_s
       erb = ERB.new(File.read(filename), nil, "-")
       sections = yaml['sections']
       env = yaml['env']
@@ -27,7 +28,7 @@ module CodegenLib
 
     def section_to_s(section)
       unless @section_erb
-        filename = '_Section.ini.erb'
+        filename = (Pathname.new(@self_path) + '_Section.ini.erb').to_s
         @section_erb = ERB.new(File.read(filename), nil, "-")
         @section_erb.filename = filename
       end

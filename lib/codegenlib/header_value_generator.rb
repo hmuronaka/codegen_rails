@@ -1,8 +1,8 @@
-require 'yaml'
-require 'CppHelper.rb'
-require 'type_map.rb'
+#require 'yaml'
+#require 'CppHelper.rb'
+#require 'type_map.rb'
 
-module CodegenLib
+module Codegenlib
 
   class HeaderValueGenerator
   

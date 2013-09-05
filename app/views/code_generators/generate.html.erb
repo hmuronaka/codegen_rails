@@ -5,6 +5,8 @@
   <%= submit_tag("generate") %>
 <% end %>
 
-<% if @res[:to_code] %>
-  <%= text_area_tag("res[to_code]", @res[:to_code], size:"80x20") %>
+<% if @res[:to_code_1] %>
+  <%= text_area_tag("res[to_code_1]", @res[:to_code_1], size:"80x20") %>
+  <%= text_area_tag("res[to_code_2]", @res[:to_code_2], size:"80x20") %>
+  <%= text_area_tag("res[to_code_3]", @res[:to_code_3], size:"80x20") %>
 <% end %>

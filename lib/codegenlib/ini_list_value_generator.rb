@@ -1,6 +1,6 @@
-require 'IniValueGenerator.rb'
+# require 'IniValueGenerator.rb'
 
-module CodegenLib 
+module Codegenlib 
 
   class IniListValueGenerator < IniValueGenerator
   

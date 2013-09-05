@@ -1,6 +1,6 @@
 #coding: utf-8
 
-module CodegenLib
+module Codegenlib
 
 TYPE_MAP = {
   'string' => "CString",

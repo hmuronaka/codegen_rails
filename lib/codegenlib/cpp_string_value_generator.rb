@@ -1,6 +1,6 @@
-require 'CppHelper.rb'
+# require 'CppHelper.rb'
 
-module CodegenLib
+module Codegenlib
 
   class CppStringValueGenerator
 

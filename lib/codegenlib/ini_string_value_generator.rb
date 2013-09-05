@@ -1,6 +1,6 @@
-require 'IniValueGenerator'
+# require 'IniValueGenerator'
 
-module Codegen
+module Codegenlib
 
   class IniStringValueGenerator < IniValueGenerator
   
