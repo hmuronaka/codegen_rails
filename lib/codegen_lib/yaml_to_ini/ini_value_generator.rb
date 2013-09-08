@@ -1,7 +1,7 @@
 #require 'yaml'
 #require 'IniCommentGenerator.rb'
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
   class IniValueGenerator
   

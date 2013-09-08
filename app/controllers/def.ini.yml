@@ -1,5 +1,6 @@
 env:
   list_len: 9
+  name: Sample
 sections:
   - section: server
     comment: サーバー定義

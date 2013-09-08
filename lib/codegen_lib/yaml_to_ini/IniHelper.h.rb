@@ -1,6 +1,6 @@
 require 'TypeMap.rb'
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
   def self.generate_IniHelper_Header
    return <<STR

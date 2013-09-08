@@ -6,7 +6,7 @@
 # require 'IniIntValueGenerator.rb'
 # require 'pathname'
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
   class IniGenerator
 
@@ -24,6 +24,12 @@ module Codegenlib
       sections = yaml['sections']
       env = yaml['env']
       erb.result(binding)
+    end
+
+    def generate_filename(yaml)
+      env = yaml['env']
+      name = env['name']
+      return "#{name}.ini"
     end
 
     def section_to_s(section)

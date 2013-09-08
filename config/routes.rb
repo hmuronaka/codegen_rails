@@ -1,5 +1,8 @@
 Codegen::Application.routes.draw do
+  resources :generator_infos
+
   get "code_generators/generate"
+  get "code_generators/index"
 
   get "inis/show"
 

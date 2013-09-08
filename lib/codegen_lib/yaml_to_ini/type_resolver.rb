@@ -1,6 +1,6 @@
 #coding: utf-8
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
 TYPE_MAP = {
   'string' => "CString",

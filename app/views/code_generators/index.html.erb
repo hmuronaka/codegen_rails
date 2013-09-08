@@ -1,0 +1,30 @@
+<h1>Listing generator_infos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>From</th>
+    <th>To</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @generator_infos.each do |generator_info| %>
+  <tr>
+    <td><%= generator_info.name %></td>
+    <td><%= generator_info.description %></td>
+    <td><%= generator_info.from %></td>
+    <td><%= generator_info.to %></td>
+    <td><%= link_to 'C++', code_generators_generate_path(from: generator_info.from, to: generator_info.to, language: 'cpp'), method: :get  %></td>
+    <td><%= link_to 'Show', generator_info %></td>
+    <td><%= link_to 'Edit', edit_generator_info_path(generator_info) %></td>
+    <td><%= link_to 'Destroy', generator_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Generator info', new_generator_info_path %>

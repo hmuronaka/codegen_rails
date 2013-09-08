@@ -2,7 +2,7 @@
 #require 'CppHelper.rb'
 #require 'type_map.rb'
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
   class HeaderListValueGenerator 
   

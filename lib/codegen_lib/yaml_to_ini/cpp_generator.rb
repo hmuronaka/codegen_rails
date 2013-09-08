@@ -6,7 +6,7 @@
 # require 'CppStringValueGenerator.rb'
 # require 'pathname'
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
   class CppGenerator
   
@@ -18,14 +18,21 @@ module Codegenlib
   
     end
   
-    def generate(name, yaml)
-      @name = name
+    def generate(yaml)
       env = yaml['env']
+      @name = env['name']
+      name = @name
       sections = yaml['sections']
       filename = Pathname.new(@self_path) + 'Ini.cpp.erb'
       erb = ERB.new(File.read(filename.to_s), nil, '-')
       erb.filename = filename.to_s
       erb.result(binding)
+    end
+
+    def generate_filename(yaml)
+      env = yaml['env']
+      name = env['name']
+      return "#{name}.cpp"
     end
 
     def section_to_s(section)

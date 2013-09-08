@@ -9,13 +9,20 @@ codegen=$HOME/Rails_Projects/codegen_rails CD=. filter="*" {
   application_controller.rb
   code_generators_controller.rb
   def.ini.yml
+  generator_infos_controller.rb
   inis_controller.rb
   }
   app_models=./app/models CD=. writhing=. filter="*" {
+  generator_info.rb
   }
   app_views=./app/views CD=. writhing=. filter="**/*" {
   code_generators/codegen.html.erb
   code_generators/generate.html.erb
+  generator_infos/_form.html.erb
+  generator_infos/edit.html.erb
+  generator_infos/index.html.erb
+  generator_infos/new.html.erb
+  generator_infos/show.html.erb
   inis/index.html.erb
   inis/show.html.erb
   layouts/application.html.erb
@@ -23,10 +30,10 @@ codegen=$HOME/Rails_Projects/codegen_rails CD=. filter="*" {
   app_helper=./app/helpers/ CD=. writing=. filter="**/*" {
   application_helper.rb
   code_generators_helper.rb
+  generator_infos_helper.rb
   inis_helper.rb
   }
-  lib=./lib/codegenlib/ CD=. writhing=. filter="**/*" {
-  Indent.rb
+  lib=./lib/codegen_lib/ CD=. writhing=. filter="**/*" {
   Ini.cpp.erb
   Ini.erb
   Ini.h.erb
@@ -52,28 +59,64 @@ codegen=$HOME/Rails_Projects/codegen_rails CD=. filter="*" {
   ini_string_value_generator.rb
   ini_value_generator.rb
   type_map.rb
+  yaml_to_ini/Ini.cpp.erb
+  yaml_to_ini/Ini.erb
+  yaml_to_ini/Ini.h.erb
+  yaml_to_ini/IniHelper.cpp
+  yaml_to_ini/IniHelper.h.rb
+  yaml_to_ini/_Class.cpp.erb
+  yaml_to_ini/_Class.h.erb
+  yaml_to_ini/_Section.cpp.erb
+  yaml_to_ini/_Section.h.erb
+  yaml_to_ini/_Section.ini.erb
+  yaml_to_ini/cpp_generator.rb
+  yaml_to_ini/cpp_helper.rb
+  yaml_to_ini/cpp_int_value_generator.rb
+  yaml_to_ini/cpp_string_value_generator.rb
+  yaml_to_ini/def.ini.yml
+  yaml_to_ini/generator.rb
+  yaml_to_ini/header_generator.rb
+  yaml_to_ini/header_list_value_generator.rb
+  yaml_to_ini/header_value_generator.rb
+  yaml_to_ini/ini_comment_generator.rb
+  yaml_to_ini/ini_generator.rb
+  yaml_to_ini/ini_int_value_generator.rb
+  yaml_to_ini/ini_list_value_generator.rb
+  yaml_to_ini/ini_string_value_generator.rb
+  yaml_to_ini/ini_value_generator.rb
+  yaml_to_ini/type_map.rb
   IIni.h
   IniHelper.h
+  yaml_to_ini/IIni.h
+  yaml_to_ini/IniHelper.h
   }
   app_asset=./app/assets/ CD=. writhing=. filter="**/*" {
   images/rails.png
   javascripts/application.js
   javascripts/code_generators.js.coffee
+  javascripts/generator_infos.js.coffee
   javascripts/inis.js.coffee
   stylesheets/application.css
   stylesheets/code_generators.css.scss
+  stylesheets/generator_infos.css.scss
   stylesheets/inis.css.scss
   stylesheets/scaffolds.css.scss
   }
   app_db=./db/ CD=. writhing=. filter="**/*.rb" {
+  migrate/20130905230348_create_generator_infos.rb
+  schema.rb
   seeds.rb
   }
   app_test=./test/ CD=. writhing=. filter="**/*" { 
+  fixtures/generator_infos.yml
   functional/code_generators_controller_test.rb
+  functional/generator_infos_controller_test.rb
   functional/inis_controller_test.rb
   performance/browsing_test.rb
   test_helper.rb
+  unit/generator_info_test.rb
   unit/helpers/code_generators_helper_test.rb
+  unit/helpers/generator_infos_helper_test.rb
   unit/helpers/inis_helper_test.rb
   }
   script=./script/ CD=. writing=. filter=**/*" {

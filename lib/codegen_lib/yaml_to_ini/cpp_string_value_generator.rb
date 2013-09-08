@@ -1,6 +1,6 @@
 # require 'CppHelper.rb'
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
   class CppStringValueGenerator
 

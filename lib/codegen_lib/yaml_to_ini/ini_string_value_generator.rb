@@ -1,8 +1,8 @@
-#require 'IniValueGenerator.rb'
+# require 'IniValueGenerator'
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
-  class IniIntValueGenerator < IniValueGenerator
+  class IniStringValueGenerator < IniValueGenerator
   
     def generate(value_def)
       result = <<STR

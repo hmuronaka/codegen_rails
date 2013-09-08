@@ -6,7 +6,7 @@
 #require 'pathname'
 #require 'type_map.rb'
 
-module Codegenlib
+module CodegenLib::YamlToIni
 
   class HeaderGenerator
   
@@ -16,8 +16,9 @@ module Codegenlib
       @self_path = File.dirname(File.expand_path(__FILE__))
     end
   
-    def generate(name, yaml)
-      @name = name
+    def generate(yaml)
+      env = yaml['env']
+      @name = env['name']
       source = ""
 
       env = yaml['env']
@@ -28,6 +29,12 @@ module Codegenlib
       erb = ERB.new(File.read(filename.to_s),nil,'-')
       erb.filename = filename.to_s
       erb.result(binding)
+    end
+
+    def generate_filename(yaml)
+      env = yaml['env']
+      name = env['name']
+      return "#{name}.h"
     end
 
     def section_to_s(section)

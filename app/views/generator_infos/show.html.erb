@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @generator_info.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @generator_info.description %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @generator_info.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @generator_info.to %>
+</p>
+
+
+<%= link_to 'Edit', edit_generator_info_path(@generator_info) %> |
+<%= link_to 'Back', generator_infos_path %>

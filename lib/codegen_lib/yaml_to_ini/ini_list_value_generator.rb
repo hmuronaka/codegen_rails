@@ -1,6 +1,6 @@
 # require 'IniValueGenerator.rb'
 
-module Codegenlib 
+module CodegenLib::YamlToIni 
 
   class IniListValueGenerator < IniValueGenerator
   
